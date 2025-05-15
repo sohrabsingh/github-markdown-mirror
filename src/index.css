@@ -1,0 +1,443 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* GitHub Markdown Styles */
+.markdown-preview {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.light .markdown-preview {
+  color: #24292f;
+}
+
+.dark .markdown-preview {
+  color: #c9d1d9;
+}
+
+.markdown-preview > *:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-preview > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-preview a {
+  text-decoration: none;
+}
+
+.light .markdown-preview a {
+  color: #0969da;
+}
+
+.dark .markdown-preview a {
+  color: #58a6ff;
+}
+
+.markdown-preview a:hover {
+  text-decoration: underline;
+}
+
+.markdown-preview strong {
+  font-weight: 600;
+}
+
+.markdown-preview h1, 
+.markdown-preview h2, 
+.markdown-preview h3, 
+.markdown-preview h4, 
+.markdown-preview h5, 
+.markdown-preview h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-preview h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+}
+
+.light .markdown-preview h1,
+.light .markdown-preview h2 {
+  border-bottom: 1px solid #d0d7de;
+}
+
+.dark .markdown-preview h1,
+.dark .markdown-preview h2 {
+  border-bottom: 1px solid #30363d;
+}
+
+.markdown-preview h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+}
+
+.markdown-preview h3 {
+  font-size: 1.25em;
+}
+
+.markdown-preview h4 {
+  font-size: 1em;
+}
+
+.markdown-preview h5 {
+  font-size: 0.875em;
+}
+
+.markdown-preview h6 {
+  font-size: 0.85em;
+}
+
+.light .markdown-preview h6 {
+  color: #57606a;
+}
+
+.dark .markdown-preview h6 {
+  color: #8b949e;
+}
+
+.markdown-preview hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  border: 0;
+}
+
+.light .markdown-preview hr {
+  background-color: #d0d7de;
+}
+
+.dark .markdown-preview hr {
+  background-color: #30363d;
+}
+
+.markdown-preview p,
+.markdown-preview blockquote,
+.markdown-preview ul,
+.markdown-preview ol,
+.markdown-preview dl,
+.markdown-preview table,
+.markdown-preview pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-preview blockquote {
+  padding: 0 1em;
+}
+
+.light .markdown-preview blockquote {
+  color: #57606a;
+  border-left: 0.25em solid #d0d7de;
+}
+
+.dark .markdown-preview blockquote {
+  color: #8b949e;
+  border-left: 0.25em solid #30363d;
+}
+
+.markdown-preview blockquote > :first-child {
+  margin-top: 0;
+}
+
+.markdown-preview blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 2em;
+}
+
+.markdown-preview ul {
+  list-style-type: disc;
+}
+
+.markdown-preview ol {
+  list-style-type: decimal;
+}
+
+.markdown-preview ul ul,
+.markdown-preview ul ol,
+.markdown-preview ol ol,
+.markdown-preview ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-preview li {
+  word-wrap: break-all;
+}
+
+.markdown-preview li + li {
+  margin-top: 0.25em;
+}
+
+.markdown-preview dl {
+  padding: 0;
+}
+
+.markdown-preview dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-preview dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-preview table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-preview table th {
+  font-weight: 600;
+}
+
+.markdown-preview table th,
+.markdown-preview table td {
+  padding: 6px 13px;
+}
+
+.light .markdown-preview table th,
+.light .markdown-preview table td {
+  border: 1px solid #d0d7de;
+}
+
+.dark .markdown-preview table th,
+.dark .markdown-preview table td {
+  border: 1px solid #30363d;
+}
+
+.markdown-preview table tr {
+  border-top: 1px solid #d0d7de;
+}
+
+.light .markdown-preview table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #d0d7de;
+}
+
+.dark .markdown-preview table tr {
+  background-color: #0d1117;
+  border-top: 1px solid #30363d;
+}
+
+.light .markdown-preview table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.dark .markdown-preview table tr:nth-child(2n) {
+  background-color: #161b22;
+}
+
+.markdown-preview img {
+  max-width: 100%;
+  box-sizing: content-box;
+}
+
+.light .markdown-preview img {
+  background-color: #ffffff;
+}
+
+.dark .markdown-preview img {
+  background-color: #0d1117;
+}
+
+.markdown-preview code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+.light .markdown-preview code {
+  background-color: #f6f8fa;
+}
+
+.dark .markdown-preview code {
+  background-color: #161b22;
+}
+
+.markdown-preview pre {
+  word-wrap: normal;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+}
+
+.light .markdown-preview pre {
+  background-color: #f6f8fa;
+}
+
+.dark .markdown-preview pre {
+  background-color: #161b22;
+}
+
+.markdown-preview pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-preview .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-preview .task-list-item-checkbox {
+  margin: 0 0.2em 0 -1.3em;
+  vertical-align: middle;
+}
+
+/* Editor custom styles */
+.editor-container {
+  border-radius: 6px;
+}
+
+.light .editor-container {
+  border: 1px solid #d0d7de;
+}
+
+.dark .editor-container {
+  border: 1px solid #30363d;
+}
+
+.editor-toolbar {
+  border-bottom: 1px solid #d0d7de;
+}
+
+.light .editor-toolbar {
+  border-bottom: 1px solid #d0d7de;
+}
+
+.dark .editor-toolbar {
+  border-bottom: 1px solid #30363d;
+}
+
+.editor-textarea {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+
+.dark .editor-textarea {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
